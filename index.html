@@ -1,0 +1,44 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Study App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flashcard Study App</h1>
+    </header>
+    <main>
+        <section id="deck-section">
+            <h2>Decks</h2>
+            <div id="deck-list"></div>
+            <form id="deck-form">
+                <input type="text" id="deck-name" placeholder="Enter deck name" required>
+                <button type="submit">Create Deck</button>
+            </form>
+        </section>
+        <section id="flashcard-section">
+            <h2>Flashcards</h2>
+            <div id="flashcard-list"></div>
+            <form id="flashcard-form">
+                <input type="text" id="question" placeholder="Enter question" required>
+                <input type="text" id="answer" placeholder="Enter answer" required>
+                <select id="deck-select" required>
+                    <option value="" disabled selected>Select a deck</option>
+                </select>
+                <button type="submit">Add Flashcard</button>
+            </form>
+            <button id="start-quiz">Start Quiz</button>
+            <div id="quiz-container"></div>
+            <button id="end-quiz">End Quiz</button>
+            <button id="reset-btn">Reset</button> <!-- New: Reset button -->
+            <div id="score"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

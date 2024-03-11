@@ -1,0 +1,122 @@
+/* styles.css */
+
+/* Common styles for all screen sizes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+section {
+    flex: 1;
+    margin: 0 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"], select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+form#deck-form button {
+    display: block; /* Ensure button is displayed as a block element */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+div.deck-item {
+    padding-bottom: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#flashcard-section, #deck-section h2 {
+    text-align: center;
+}
+
+#flashcard-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flashcard {
+    border: 1px solid #333;
+    width: 200px;
+    height: 100px;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Styling for reset button */
+#reset-btn {
+    background-color: #f44336; /* Red */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
